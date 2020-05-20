@@ -29,7 +29,7 @@
         var ctx = canvas.getContext('2d');
         // 创建图片对象
         var heartImage = new Image();
-        heartImage.src = 'img/pink2.png';
+        heartImage.src = 'img/heart2.svg';
         var num = 100;
         init();
         window.addEventListener('resize', function () {
@@ -72,9 +72,16 @@
         }
 
         function getRomanticWords() {
-            let romanticWords = ["爱你一辈子", "感谢你", "喜欢你", "无敌小可爱", "小萌新", "i miss you", "i love you"];
+            let romanticWords = ["爱你一辈子"
+                                 , "感谢你"
+                                 , "喜欢你"
+                                 , "无敌小可爱"
+                                 , "小萌新"
+                                 , "i miss you"
+                                 , "i love you"
+                                 ];
 
-            return romanticWords[parseInt(romanticWords.length * Math.random())];
+            return romanticWords[parseInt( romanticWords.length * Math.random() )];
         }
 
         function Heart(type) {
