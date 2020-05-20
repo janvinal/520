@@ -72,15 +72,16 @@
         }
 
         function getRomanticWords() {
-            let romanticWrods = ["爱你一辈子"
+            let romanticWords = ["爱你一辈子"
                                 , "感谢你"
                                 , "喜欢你"
-                                , "无故小可爱"
+                                , "无敌小可爱"
                                 , "小萌新"
-                                , "I Miss You"
-                                , "I Love You"
-                                ];
-            return romanticWrods[parseInt(Math.random() * romanticWrods.length)];
+                                , "i miss you"
+                                , "i love you"
+                               ];
+        
+            return romanticWords[parseInt( romanticWords.length * Math.random() )];
         }
 
         function Heart(type) {
