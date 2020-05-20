@@ -26,7 +26,7 @@
         var wW = window.innerWidth;
         var wH = window.innerHeight;
         // 创建画布
-        var ctx = canvas.getContext('2d');
+        var ctx = canvas.getContext('3d');
         // 创建图片对象
         var heartImage = new Image();
         heartImage.src = 'img/pink2.png';
@@ -72,16 +72,9 @@
         }
 
         function getRomanticWords() {
-            let romanticWords = ["爱你一辈子"
-                                , "感谢你"
-                                , "喜欢你"
-                                , "无敌小可爱"
-                                , "小萌新"
-                                , "i miss you"
-                                , "i love you"
-                               ];
-        
-            return romanticWords[parseInt( romanticWords.length * Math.random() )];
+            let romanticWords = ["爱你一辈子", "感谢你", "喜欢你", "无敌小可爱", "小萌新", "i miss you", "i love you"];
+
+            return romanticWords[parseInt(romanticWords.length * Math.random())];
         }
 
         function Heart(type) {
@@ -165,11 +158,13 @@
 
         function render() {
             ctx.clearRect(0, 0, wW, wH);
-            for (var i = 0; i < hearts.length; i++) {
-                hearts[i].draw();
-                hearts[i].update();
-            }
-            requestAnimationFrame(render);
+            setTimeout(100, function () {
+                for (var i = 0; i < hearts.length; i++) {
+                    hearts[i].draw();
+                    hearts[i].update();
+                }
+                requestAnimationFrame(render);
+            });
         }
     </script>
 </body>
